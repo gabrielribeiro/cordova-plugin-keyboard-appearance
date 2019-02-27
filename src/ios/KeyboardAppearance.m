@@ -15,7 +15,7 @@
 {
     CDVPluginResult* pluginResult = nil;
     NSString* param = [command.arguments objectAtIndex:0];
-    
+
     if ([param isEqualToString:@"dark"]) {
         [[UITextField appearance] setKeyboardAppearance:UIKeyboardAppearanceDark];
     } else if ([param isEqualToString:@"light"]) {
@@ -24,7 +24,7 @@
         [[UITextField appearance] setKeyboardAppearance:UIKeyboardAppearanceDefault];
     }
 
-    pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:echo];
+    pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:param];
 
     [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
 }
