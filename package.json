@@ -1,0 +1,25 @@
+{
+  "name": "cordova-plugin-keyboard-appearance",
+  "version": "0.1.0",
+  "description": "Sets UIKeyboardAppearance",
+  "cordova": {
+    "id": "cordova-plugin-keyboard-appearance",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabrielribeiro/cordova-plugin-keyboard-appearance.git"
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-ios"
+  ],
+  "author": "Gabriel Ribeiro",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gabrielribeiro/cordova-plugin-keyboard-appearance/issues"
+  },
+  "homepage": "https://github.com/gabrielribeiro/cordova-plugin-keyboard-appearance#readme"
+}
