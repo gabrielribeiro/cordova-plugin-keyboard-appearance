@@ -1,6 +1,7 @@
 /********* KeyboardAppearance.m Cordova Plugin Implementation *******/
 
 #import <Cordova/CDV.h>
+#import <objc/runtime.h>
 
 @interface KeyboardAppearance : CDVPlugin {
   // Member variables go here.
@@ -36,6 +37,9 @@ static NSString* UITraitsClassString;
     return _keyboardStyle;
 }
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wstrict-prototypes"
+
 - (void)setKeyboardStyle:(NSString*)style
 {
     if ([style isEqualToString:_keyboardStyle]) {
@@ -61,6 +65,8 @@ static NSString* UITraitsClassString;
 
     _keyboardStyle = style;
 }
+
+#pragma clang diagnostic pop
 
 #pragma mark Plugin interface
 
