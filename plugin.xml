@@ -3,7 +3,7 @@
   <name>KeyboardAppearance</name>
 
   <js-module name="KeyboardAppearance" src="www/KeyboardAppearance.js">
-    <clobbers target="cordova.plugins.KeyboardAppearance" />
+    <clobbers target="cordova.plugins.keyboardAppearance" />
   </js-module>
 
   <platform name="ios">
