@@ -1,6 +1,6 @@
 # cordova-plugin-keyboard-appearance
 
-> This plugin lets you change `UIKeyboardAppearance` of `Keyboard` with values `light` or `dark`. It also supports the __KeyboardStyle__ (string) preference in config.xml.
+> This plugin lets you change `UIKeyboardAppearance` of `Keyboard` with values `light` or `dark`. It also supports the __KeyboardStyle__ (string) preference in config.xml. BASED ON THIS [cjpearson commit](https://github.com/cjpearson/cordova-plugin-keyboard/commit/e8cacbf790f5d16c7eb069bd146ef9b9fe488417).
 
 This plugin has only been tested in Cordova 3.2 or greater, and its use in previous Cordova versions is not recommended (potential conflict with keyboard customization code present in the core in previous Cordova versions).
 
@@ -49,3 +49,6 @@ Sets style wihtin UIKeyboardAppearance.
 
 - 0.1.0
     - Initial release
+- 0.2.0
+    - Added setting key
+    - Fixed toolbar color
