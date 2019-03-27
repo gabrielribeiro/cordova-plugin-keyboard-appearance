@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-keyboard-appearance",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Sets UIKeyboardAppearance",
   "cordova": {
     "id": "cordova-plugin-keyboard-appearance",
@@ -21,5 +21,9 @@
   "bugs": {
     "url": "https://github.com/gabrielribeiro/cordova-plugin-keyboard-appearance/issues"
   },
-  "homepage": "https://github.com/gabrielribeiro/cordova-plugin-keyboard-appearance#readme"
+  "homepage": "https://github.com/gabrielribeiro/cordova-plugin-keyboard-appearance#readme",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
 }

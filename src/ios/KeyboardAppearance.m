@@ -3,6 +3,10 @@
 #import <Cordova/CDV.h>
 #import <objc/runtime.h>
 
+#ifndef __CORDOVA_3_2_0
+#warning "The keyboard appearance style plugin is only supported in Cordova 3.2 or greater, it may not work properly in an older version."
+#endif
+
 @interface KeyboardAppearance : CDVPlugin {
   // Member variables go here.
   @protected NSString* _keyboardStyle;
@@ -28,6 +32,16 @@ static NSString* UITraitsClassString;
     UIClassString = [@[@"UI", @"Web", @"Browser", @"View"] componentsJoinedByString:@""];
     WKClassString = [@[@"WK", @"Content", @"View"] componentsJoinedByString:@""];
     UITraitsClassString = [@[@"UI", @"Text", @"Input", @"Traits"] componentsJoinedByString:@""];
+
+    NSString* setting = @"KeyboardStyle";
+    if ([self settingForKey:setting]) {
+        self.keyboardStyle = [self settingForKey:setting];
+    }
+}
+
+- (id)settingForKey:(NSString*)key
+{
+    return [self.commandDelegate.settings objectForKey:[key lowercaseString]];
 }
 
 #pragma mark Keyboard Style
@@ -62,6 +76,14 @@ static NSString* UITraitsClassString;
             class_addMethod(c, @selector(keyboardAppearance), newImp, "l@:");
         }
     }
+
+    [UIToolbar.appearance setTintColor:([style isEqualToString:@"dark"] ? UIColor.whiteColor : UIToolbar.appearance.tintColor)];
+
+    [UIToolbar.appearance setBarTintColor:([style isEqualToString:@"dark"] ? UIColor.darkGrayColor : UIToolbar.appearance.barTintColor)];
+
+    [UIToolbar.appearance setBarStyle: ([style isEqualToString:@"dark"] ? UIBarStyleBlack : UIBarStyleDefault)];
+
+    [UIToolbar.appearance setTranslucent:YES];
 
     _keyboardStyle = style;
 }

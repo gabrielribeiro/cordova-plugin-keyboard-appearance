@@ -1,17 +1,13 @@
 # cordova-plugin-keyboard-appearance
 
-> This plugin provides the `Keyboard` object which has some functions to customize and control the keyboard. It also supports the __HideKeyboardFormAccessoryBar__ (boolean) and __KeyboardShrinksView__ (boolean) preferences in config.xml.
+> This plugin lets you change `UIKeyboardAppearance` of `Keyboard` with values `light` or `dark`. It also supports the __KeyboardStyle__ (string) preference in config.xml.
 
-This plugin has only been tested in Cordova 3.2 or greater, and its use in previous Cordova versions is not recommended (potential conflict with keyboard customization code present in the core in previous Cordova versions). 
-
-If you do use this plugin in an older Cordova version (again, not recommended), you have to make sure the HideKeyboardFormAccessoryBar and KeyboardShrinksView preference values are *always* false, and only use the API functions to turn things on/off.
-
-This plugin was based on this Apache [project](https://github.com/apache/cordova-plugins/tree/master/keyboard) and has a compatible API.
+This plugin has only been tested in Cordova 3.2 or greater, and its use in previous Cordova versions is not recommended (potential conflict with keyboard customization code present in the core in previous Cordova versions).
 
 - [Installation](#installation)
 - [Methods](#methods)
     - [cordova.plugins.keyboardAppearance.setStyle](#setStyle)
-- [Releases](#releases) 
+- [Releases](#releases)
 
 # Installation
 
@@ -51,5 +47,5 @@ Sets style wihtin UIKeyboardAppearance.
 
 # Releases
 
-- 0.1.0 
+- 0.1.0
     - Initial release
